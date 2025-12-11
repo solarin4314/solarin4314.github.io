@@ -1,0 +1,13 @@
+- name: "대용량 로그 파이프라인 구축"
+  descr: "일 3~4천만 건의 대용량 로그를 처리하는 파이프라인을 구축하고, RDB 부하 문제를 Athena 도입으로 해결했습니다."
+  demo: "" 
+  source: "https://github.com/solarin4314/solarin4314.github.io"
+  tags: ["Kafka", "Spark", "MongoDB", "AWS Athena"]
+  image: "assets/img/project_pipeline.png"
+
+- name: "전사 지표 시각화 대시보드"
+  descr: "Metabase를 활용하여 기획/사업팀이 직접 데이터를 조회할 수 있는 환경을 구축했습니다."
+  demo: ""
+  source: ""
+  tags: ["MySQL", "Metabase", "Visualization"]
+  image: ""
