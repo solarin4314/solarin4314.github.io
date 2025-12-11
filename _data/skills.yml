@@ -1,0 +1,12 @@
+- name: Data Engineering
+  percentage: 90
+  color: primary
+- name: Python & SQL
+  percentage: 85
+  color: info
+- name: AWS & Cloud
+  percentage: 80
+  color: warning
+- name: Kafka & Streaming
+  percentage: 75
+  color: danger
