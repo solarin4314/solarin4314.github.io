@@ -1,6 +1,0 @@
-- name: 대용량 로그 파이프라인 구축
-  descr: 일 3~4천만 건의 대용량 로그를 처리하는 파이프라인을 구축하고, RDB 부하 문제를 Athena 도입으로 해결했습니다.
-  demo: # 데모 URL이 없으면 비워두세요
-  source: https://github.com/solarin4314/portfolio # 깃허브 주소
-  tags: [Kafka, Spark, MongoDB, AWS Athena]
-  image: /assets/img/pipeline_structure.png # (이미지 경로)
