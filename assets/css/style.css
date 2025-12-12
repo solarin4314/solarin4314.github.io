@@ -1,0 +1,15 @@
+.skill-badge {
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+
+#skills i {
+  color: #4a6ea9;
+}
