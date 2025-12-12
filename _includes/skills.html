@@ -5,6 +5,11 @@
   {% endif %}
   <div class="skill-content">
     <h5>{{ skill.name }}</h5>
-    {# TAG SECTION DISABLED #}
+    {% for tag in skill.tags %}
+      <div style="color:cyan">LOOP ENTRY → {{ skill.name }}</div>
+      <span class="skill-badge" style="background: {{ tag.color }}33; color: {{ tag.color }}">
+        {{ tag.name }}
+      </span>
+  {% endfor %}
   </div>
 </div>
