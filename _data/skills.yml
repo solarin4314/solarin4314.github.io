@@ -1,15 +1,14 @@
-- name: "Data Engineering"
-  percentage: 90
-  color: "primary"
+- name: Data Engineering
+  descr: End-to-End data pipeline design, batch & streaming processing, aggregation and automation
 
-- name: "Python & SQL"
-  percentage: 85
-  color: "info"
+- name: Programming
+  descr: Python for ETL and automation, SQL for analytics and aggregation
 
-- name: "AWS & Cloud"
-  percentage: 80
-  color: "warning"
+- name: Data Storage
+  descr: MongoDB, MySQL, Amazon S3
 
-- name: "Kafka & Streaming"
-  percentage: 75
-  color: "danger"
+- name: Processing & Analytics
+  descr: Apache Spark, Athena
+
+- name: Search & Observability
+  descr: Elasticsearch, Logstash, Kibana
