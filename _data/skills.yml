@@ -1,14 +1,14 @@
-- name: Data Engineering
-  descr: End-to-End data pipeline design, batch & streaming processing, aggregation and automation
+- name: "Data Engineering"
+  descr: "End-to-End data pipeline design, batch & streaming processing, aggregation and automation"
 
-- name: Programming
-  descr: Python for ETL and automation, SQL for analytics and aggregation
+- name: "Programming"
+  descr: "Python for ETL and automation, SQL for analytics and aggregation"
 
-- name: Data Storage
-  descr: MongoDB, MySQL, Amazon S3
+- name: "Data Storage"
+  descr: "MongoDB, MySQL, Amazon S3"
 
-- name: Processing & Analytics
-  descr: Apache Spark, Athena
+- name: "Processing & Analytics"
+  descr: "Apache Spark, Athena"
 
-- name: Search & Observability
-  descr: Elasticsearch, Logstash, Kibana
+- name: "Search & Observability"
+  descr: "Elasticsearch, Logstash, Kibana"
