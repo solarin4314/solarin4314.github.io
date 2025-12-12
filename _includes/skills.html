@@ -1,16 +1,12 @@
 <section id="skills" class="section-padding">
   <div class="container">
     <h2 class="mb-4">Skills</h2>
+
     <div class="row">
       {% for skill in site.data.skills %}
-      <div class="col-md-6 mb-3">
-        <div class="d-flex justify-content-between">
-          <strong>{{ skill.name }}</strong>
-          <span>{{ skill.percentage }}%</span>
-        </div>
-        <div class="progress" style="height: 10px;">
-          <div class="progress-bar bg-{{ skill.color }}" role="progressbar" style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
+      <div class="col-md-6 mb-4">
+        <h5 class="mb-2">{{ skill.name }}</h5>
+        <p class="text-muted mb-0">{{ skill.descr }}</p>
       </div>
       {% endfor %}
     </div>
