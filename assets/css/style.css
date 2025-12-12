@@ -50,3 +50,40 @@ body {
 h2, h3, h4, h5 {
   font-weight: 600;
 }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+a.btn, a.btn-primary {
+  background: #58a6ff;
+  border-color: #58a6ff;
+  color: #fff;
+  transition: 0.2s;
+}
+
+a.btn:hover {
+  background: #3a7bd5;
+  border-color: #3a7bd5;
+}
+
+.section {
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+.section .icon-box {
+  background: #161b22;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
+
