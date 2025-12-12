@@ -16,16 +16,20 @@
 
 .skill-badge {
   padding: 6px 12px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 6px 10px;
+  margin: 4px 6px;
+  display: inline-flex;
+  align-items: center;
   border-radius: 8px;
-  margin-right: 6px;
-  margin-bottom: 6px;
-  display: inline-block;
   font-size: 0.85rem;
   font-weight: 600;
+  line-height: 1.5;
   backdrop-filter: blur(4px);
+}
+
+.skill-badge:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+  transition: 0.15s ease-in-out;
 }
 
 
