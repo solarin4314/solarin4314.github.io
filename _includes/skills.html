@@ -1,17 +1,13 @@
-<div class="col-md-6 mb-3">
-  <div class="skill-card">
-    {% if skill.icon %}
-      <i class="{{ skill.icon }} fa-2x skill-icon"></i>
-    {% endif %}
-
-    <div class="skill-content">
-      <h5>{{ skill.name }}</h5>
-
-      {% for tag in skill.tags %}
-        <span class="skill-badge" style="background: {{ tag.color }}33; color: {{ tag.color }}">
-          {{ tag.name }}
-        </span>
-      {% endfor %}
-    </div>
+<div class="skill-card">
+  {% if skill.icon %}
+    <i class="{{ skill.icon }} fa-2x skill-icon"></i>
+  {% endif %}
+  <div class="skill-content">
+    <h5>{{ skill.name }}</h5>
+    {% for tag in skill.tags %}
+      <span class="skill-badge" style="background: {{ tag.color }}33; color: {{ tag.color }}">
+        {{ tag.name }}
+      </span>
+    {% endfor %}
   </div>
 </div>
