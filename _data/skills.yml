@@ -1,31 +1,59 @@
-- name: "Data Pipeline"
+- name: Data Pipeline
   icon: "fa-solid fa-diagram-project"
-  descr: "Kafka, Logstash, Filebeat, S3, ElasticSearch, MongoDB, MySQL"
+  tags:
+    - name: Kafka
+      color: "#231F20"
+    - name: Logstash
+      color: "#F0BF24"
+    - name: ElasticSearch
+      color: "#005571"
+    - name: MongoDB
+      color: "#47A248"
+    - name: MySQL
+      color: "#4479A1"
 
-- name: "ETL / Batch Processing"
+- name: ETL / Batch Processing
   icon: "fa-solid fa-code-branch"
-  descr: "Python(pandas), PySpark, Athena SQL, CTAS, Cron, Python Scheduler"
+  tags:
+    - name: Python
+      color: "#3776AB"
+    - name: Pandas
+      color: "#150458"
+    - name: PySpark
+      color: "#E25A1C"
+    - name: Athena SQL
+      color: "#FF9900"
+    - name: CTAS
+      color: "#FF9900"
+    - name: Scheduler
+      color: "#777777"
 
-- name: "Storage & Query Engine"
-  icon: "fa-solid fa-database"
-  descr: "AWS S3, MySQL, MongoDB, ElasticSearch, Hive, Athena"
-
-- name: "Backend Development"
+- name: Backend Development
   icon: "fa-solid fa-server"
-  descr: "Node.js 기반 서버 개발, REST API, Game Server Logic"
+  tags:
+    - name: Node.js
+      color: "#68A063"
+    - name: REST API
+      color: "#2255cc"
+    - name: Game Logic
+      color: "#999999"
 
-- name: "DevOps & Automation"
+- name: DevOps & Automation
   icon: "fa-solid fa-gear"
-  descr: "Jenkins, Docker, Bash Script, 자동화"
+  tags:
+    - name: Jenkins
+      color: "#D33833"
+    - name: Docker
+      color: "#0db7ed"
+    - name: Bash
+      color: "#111111"
 
-- name: "Cloud & Infrastructure"
-  icon: "fa-solid fa-cloud"
-  descr: "AWS, Kafka Cluster, Logstash Pipeline"
-
-- name: "Monitoring & BI"
+- name: Monitoring & BI
   icon: "fa-solid fa-chart-line"
-  descr: "Metabase, Tableau, Kibana"
-
-- name: "Programming Languages"
-  icon: "fa-solid fa-code"
-  descr: "Python, SQL, Node.js"
+  tags:
+    - name: Metabase
+      color: "#509EE3"
+    - name: Tableau
+      color: "#E97627"
+    - name: Kibana
+      color: "#E8478B"
