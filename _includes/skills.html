@@ -1,34 +1,13 @@
-<section id="skills" class="section-padding">
-  <div class="container">
-    <h2 class="mb-4">Skills</h2>
-
-    <div class="row">
-      {% for skill in site.data.skills %}
-      <div class="col-md-6 mb-4">
-        <div class="d-flex align-items-start">
-
-          {% if skill.icon %}
-            <i class="{{ skill.icon }} fa-2x me-3"></i>
-          {% endif %}
-
-          <div>
-            <h5 class="mb-2">{{ skill.name }}</h5>
-
-            {% if skill.tags %}
-              <div class="mt-2">
-                {% for tag in skill.tags %}
-                  <span class="badge skill-badge"
-                        style="background: {{ tag.color }}33; color: {{ tag.color }};">
-                    {{ tag.name }}
-                  </span>
-                {% endfor %}
-              </div>
-            {% endif %}
-
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
+<div class="skill-card">
+  {% if skill.icon %}
+    <i class="{{ skill.icon }} fa-2x skill-icon"></i>
+  {% endif %}
+  <div class="skill-content">
+    <h5>{{ skill.name }}</h5>
+    {% for tag in skill.tags %}
+      <span class="skill-badge" style="background: {{ tag.color }}33; color: {{ tag.color }}">
+        {{ tag.name }}
+      </span>
+    {% endfor %}
   </div>
-</section>
+</div>
