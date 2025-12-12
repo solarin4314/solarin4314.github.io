@@ -6,3 +6,11 @@
 .example-main {
   color: blue;
 }
+
+.newsletter, .newsletter-section, #mc_embed_signup {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
