@@ -7,7 +7,7 @@
 
 - name: "전사 지표 시각화 대시보드"
   descr: "Metabase를 활용하여 기획/사업팀이 직접 데이터를 조회할 수 있는 환경을 구축했습니다."
-  demo: ""
-  source: ""
+  demo: 
+  source: 
   tags: ["MySQL", "Metabase", "Visualization"]
-  image: ""
+  image: 
