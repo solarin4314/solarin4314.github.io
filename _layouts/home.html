@@ -17,6 +17,22 @@ layout: full-width
       <div class="col-12 col-lg-10">
         {%- include strengths.html -%}
         {%- include skills.html -%}
+        <section id="architecture" class="section-padding mt-5">
+          <div class="container">
+            <h2 class="mb-4">Architecture</h2>
+        
+            <div class="card p-3 shadow-sm bg-transparent">
+              <img
+                src="{{ site.baseurl }}/assets/img/architecture/data_pipeline.png"
+                alt="End-to-End Data Pipeline Architecture"
+                class="img-fluid"
+              />
+              <p class="small text-muted text-center mt-3 mb-0">
+                Kafka → Logstash → S3 / Elasticsearch → Athena / MongoDB Aggregation → MySQL → Metabase
+              </p>
+            </div>
+          </div>
+        </section>
         {%- include projects.html -%}
         {%- include timeline.html -%}
       </div>
