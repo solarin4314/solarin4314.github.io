@@ -13,3 +13,22 @@
 #skills i {
   color: #4a6ea9;
 }
+
+/* 기본 배경/텍스트 색상 통일 */
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+a, a:hover {
+  color: #58a6ff;
+}
+.section-title, .section-title span {
+  color: #e6edf3;
+}
+
+/* 카드/섹션 배경 */
+.box-shadow-full, .portfolio-section {
+  background: #161b22;
+  border-radius: 10px;
+  border: 1px solid #30363d;
+}
