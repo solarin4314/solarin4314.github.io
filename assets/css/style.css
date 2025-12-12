@@ -1,3 +1,5 @@
+/* -------- SKILL CARD -------- */
+
 .skill-card {
   display: flex;
   align-items: flex-start;
@@ -9,11 +11,21 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+/* 아이콘 */
 .skill-icon {
   margin-top: 4px;
   color: var(--accent, #58a6ff);
 }
 
+/* 스킬 내용 (이게 없어서 내용이 사라졌던 것) */
+.skill-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+/* 개별 스킬 태그 배지 */
 .skill-badge {
   font-size: 0.85rem;
   font-weight: 600;
@@ -21,35 +33,42 @@
   border-radius: 8px;
   margin-right: 6px;
   margin-bottom: 6px;
+  display: inline-block;
 }
 
 
-/* 기본 배경/텍스트 색상 통일 */
+/* -------- GLOBAL COLORS -------- */
+
 body {
   background-color: #0d1117;
   color: #e6edf3;
+  font-family: "Inter", sans-serif;
 }
+
 a, a:hover {
   color: #58a6ff;
 }
+
 .section-title, .section-title span {
   color: #e6edf3;
 }
 
-/* 카드/섹션 배경 */
-.box-shadow-full, .portfolio-section {
+
+/* -------- CARD / SECTION BACKGROUND -------- */
+
+.box-shadow-full,
+.portfolio-section {
   background: #161b22;
   border-radius: 10px;
   border: 1px solid #30363d;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-}
-
 h2, h3, h4, h5 {
   font-weight: 600;
 }
+
+
+/* -------- ANIMATIONS -------- */
 
 .fade-in {
   opacity: 0;
@@ -64,7 +83,11 @@ h2, h3, h4, h5 {
   }
 }
 
-a.btn, a.btn-primary {
+
+/* -------- BUTTONS -------- */
+
+a.btn,
+a.btn-primary {
   background: #58a6ff;
   border-color: #58a6ff;
   color: #fff;
@@ -76,6 +99,9 @@ a.btn:hover {
   border-color: #3a7bd5;
 }
 
+
+/* -------- SECTIONS -------- */
+
 .section {
   background: #0d1117;
   color: #e6edf3;
@@ -86,4 +112,3 @@ a.btn:hover {
   border-radius: 8px;
   border: 1px solid #30363d;
 }
-
