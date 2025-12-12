@@ -1,31 +1,31 @@
-- name: Data Pipeline
+- name: "Data Pipeline"
   icon: "fa-solid fa-diagram-project"
   descr: "Kafka, Logstash, Filebeat, S3, ElasticSearch, MongoDB, MySQL"
 
-- name: ETL / Batch Processing
+- name: "ETL / Batch Processing"
   icon: "fa-solid fa-code-branch"
   descr: "Python(pandas), PySpark, Athena SQL, CTAS, Cron, Python Scheduler"
 
-- name: Storage & Query Engine
+- name: "Storage & Query Engine"
   icon: "fa-solid fa-database"
   descr: "AWS S3, MySQL, MongoDB, ElasticSearch, Hive, Athena"
 
-- name: Backend Development
+- name: "Backend Development"
   icon: "fa-solid fa-server"
   descr: "Node.js 기반 서버 개발, REST API, Game Server Logic"
 
-- name: DevOps & Automation
+- name: "DevOps & Automation"
   icon: "fa-solid fa-gear"
   descr: "Jenkins, Docker, Bash Script, 자동화"
 
-- name: Cloud & Infrastructure
+- name: "Cloud & Infrastructure"
   icon: "fa-solid fa-cloud"
   descr: "AWS, Kafka Cluster, Logstash Pipeline"
 
-- name: Monitoring & BI
+- name: "Monitoring & BI"
   icon: "fa-solid fa-chart-line"
   descr: "Metabase, Tableau, Kibana"
 
-- name: Programming Languages
+- name: "Programming Languages"
   icon: "fa-solid fa-code"
   descr: "Python, SQL, Node.js"
