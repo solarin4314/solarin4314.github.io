@@ -16,7 +16,7 @@ layout: full-width
     <div class="row justify-content-center">
       <div class="col-12 col-lg-10">
         {%- include strengths.html -%}
-        
+        {{ site.data.skills | jsonify }}
         {%- include skills.html -%}
 
         <section id="architecture" class="section-padding mt-5">
