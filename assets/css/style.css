@@ -1,22 +1,28 @@
+/* 1. skill-card (기술 그룹 전체) 간 세로 간격 확보 */
 .skill-card {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 18px;
+  /* 기존 18px -> 30px로 증가시켜 다음 skill-card와의 간격을 넓힘 */
+  margin-bottom: 30px; 
   padding: 14px;
   background: #161b22;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-.skill-icon {
-  margin-top: 4px;
-  color: var(--accent, #58a6ff);
-}
+/* skill-card의 부모 요소인 col-md-6의 기본 margin-bottom: 1rem(약 16px)을 대체하기 위해 
+   skills.html에서 col-md-6에 mb-3 대신 mb-5를 적용하거나, 
+   .skill-card의 margin-bottom을 충분히 확보해 주는 것이 좋습니다. */
+/* col-md-6의 mb-3 (margin-bottom: 1rem)을 덮기 위해 skills.html을 수정할 필요가 있습니다.
+   아래 '2. skills.html 수정'을 참고하세요. */
 
+
+/* 2. skill-badge (개별 기술 태그) 간 수직/수평 간격 확보 및 줄 간격 개선 */
 #skills .skill-badge {
   padding: 6px 12px !important;
-  margin: 6px 8px !important;
+  /* 기존 6px 8px -> 8px 10px로 상하좌우 마진을 모두 늘려 간격을 확보 */
+  margin: 8px 10px 8px 0 !important; /* 상 8px, 우 10px, 하 8px, 좌 0 (줄 시작점에서는 왼쪽 마진 불필요) */
   border-radius: 6px !important;
   background: rgba(255,255,255,0.07) !important;
   border: 1px solid #30363d !important;
@@ -25,7 +31,22 @@
   display: inline-flex !important;
   align-items: center !important;
   white-space: nowrap !important;
+  /* 줄바꿈 시 태그 간의 수직 간격을 더 확실히 보장합니다. */
 }
+
+/* 3. 태그를 감싸는 skill-content의 줄 간격 조정 (선택 사항) */
+/* 개별 기술 태그가 여러 줄로 표시될 때 줄 간격 개선 */
+.skill-content {
+  /* line-height가 inline-flex 요소에 직접적인 영향을 주진 않으나, 
+     태그가 없는 다른 텍스트 요소가 있다면 유용하며, 명시적으로 flex 컨테이너가 아니라면 간접적으로 도움을 줍니다. */
+  line-height: 1.6; 
+}
+
+.skill-icon {
+  margin-top: 4px;
+  color: var(--accent, #58a6ff);
+}
+
 
 
 .skill-badge:hover {
