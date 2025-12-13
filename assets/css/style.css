@@ -26,21 +26,20 @@ a:hover {
 
 
 /* =========================
-   Skills Section
+   Skills Section Layout
 ========================= */
 #skills {
   margin-top: 60px;
 }
 
-#skills .section-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 30px;
+.skills-inner {
+  padding-left: 22px;   /* ← Strengths처럼 들여쓰기 */
+  border-left: 2px solid #30363d;
 }
 
 
 /* =========================
-   Skill Card (카테고리)
+   Skill Card
 ========================= */
 .skill-card {
   display: flex;
@@ -48,18 +47,17 @@ a:hover {
   gap: 14px;
 
   padding: 18px;
-  margin-bottom: 30px;
-
   background: #161b22;
-  border-radius: 10px;
-  border: 1px solid #30363d;
 
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 1px solid #30363d;
+  border-radius: 4px;   /* ← 각진 네모 */
+
+  transition: background 0.15s ease, box-shadow 0.15s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  background: #1c2128;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
 
 
@@ -68,10 +66,6 @@ a:hover {
 ========================= */
 .skill-icon {
   margin-top: 4px;
-  color: #8b949e;
-}
-
-#skills i {
   color: #8b949e;
 }
 
@@ -85,10 +79,6 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.skill-content {
-  line-height: 1.6;
-}
-
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -96,26 +86,26 @@ a:hover {
 
 
 /* =========================
-   Skill Badge (기술 태그)
+   Skill Badge (각진 네모)
 ========================= */
 #skills .skill-badge {
   display: inline-flex !important;
   align-items: center !important;
 
-  padding: 6px 12px !important;
-  margin: 8px 10px 0 0 !important;
+  padding: 6px 10px !important;
+  margin: 6px 8px 0 0 !important;
 
-  border-radius: 6px !important;
-  border: 1px solid #30363d !important;
+  border-radius: 3px !important;   /* ← 핵심: 각진 네모 */
+  border: 1px solid rgba(255,255,255,0.2) !important;
 
-  font-size: 0.85rem !important;
+  background: rgba(255,255,255,0.06) !important;
+
+  font-size: 0.8rem !important;
   font-weight: 600 !important;
 
   white-space: nowrap !important;
 }
 
 #skills .skill-badge:hover {
-  opacity: 0.85;
-  transform: translateY(-1px);
-  transition: 0.15s ease-in-out;
+  background: rgba(255,255,255,0.12) !important;
 }
