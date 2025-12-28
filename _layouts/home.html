@@ -9,18 +9,36 @@ layout: full-width
     });
   });
 </script>
-    <!-- hero section-->
-    {%- include hero.html -%}
+
+<!-- Hero Section -->
+<section id="hero" class="section-padding text-center bg-light">
+  <div class="container">
+    <h1 class="display-4 mb-3">Hi, I am Jemin Lee!</h1>
+    <p class="lead mb-4">
+      I am a Data Engineer passionate about building scalable data pipelines and insights-driven systems.
+    </p>
+
+    <!-- 핵심 강점 -->
+    <div class="d-flex justify-content-center gap-4 mb-4">
+      <span class="badge bg-primary">ETL</span>
+      <span class="badge bg-success">Data Analytics</span>
+      <span class="badge bg-info">Cloud Infra</span>
+    </div>
+
+    <!-- CTA 버튼 -->
+    <a href="#projects" class="btn btn-primary btn-lg">View My Projects</a>
+  </div>
+</section>
+
 <section class="section-padding">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-10">
-        {%- include strengths.html -%}
-        {% include skills.html %}
+
+        <!-- Architecture Section -->
         <section id="architecture" class="section-padding mt-5">
           <div class="container">
             <h2 class="mb-4">Architecture</h2>
-        
             <div class="card p-3 shadow-sm bg-transparent">
               <img
                 src="{{ site.baseurl }}/assets/img/architecture/data_pipeline.png"
@@ -33,8 +51,49 @@ layout: full-width
             </div>
           </div>
         </section>
-        {%- include projects.html -%}
+
+        <!-- Projects Section -->
+        {% assign featured_projects = site.data.projects | slice: 0,3 %}
+        <section id="projects" class="section-padding mt-5">
+          <div class="container">
+            <h2 class="mb-4">Featured Projects</h2>
+            <div class="row">
+              {% for project in featured_projects %}
+              <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                  {% if project.image %}
+                  <img src="{{ project.image }}" class="card-img-top" alt="{{ project.name }}">
+                  {% endif %}
+                  <div class="card-body">
+                    <h5 class="card-title">{{ project.name }}</h5>
+                    <p class="card-text">{{ project.descr }}</p>
+                    <div class="mb-3">
+                      {% for tag in project.tags %}
+                      <span class="badge badge-secondary">{{ tag }}</span>
+                      {% endfor %}
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      {% if project.source %}
+                      <a href="{{ project.source }}" class="btn btn-sm btn-outline-primary" target="_blank">View Code</a>
+                      {% endif %}
+                      {% if project.demo %}
+                      <a href="{{ project.demo }}" class="btn btn-sm btn-outline-success" target="_blank">Live Demo</a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="text-center mt-4">
+              <a href="/projects" class="btn btn-outline-primary">See All Projects</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Timeline Section -->
         {%- include timeline.html -%}
+
       </div>
     </div>
   </div>
