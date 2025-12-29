@@ -1,6 +1,8 @@
 <section id="timeline" class="section-padding mt-5 mb-5">
   <div class="container">
-    <h2 class="mb-4">Experience</h2>
+    {% if show_title %}
+      <h2 class="mb-4">Experience</h2>
+    {% endif %}
     <ul class="list-group list-group-flush border-left pl-3" style="border-left: 3px solid #ddd;">
       {% for item in site.data.timeline %}
       <li class="list-group-item bg-transparent">
