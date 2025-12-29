@@ -14,8 +14,8 @@ urls:
       url: /experience
     - text: Strengths
       url: /strengths
-    - text: About
-      url: /about
+#    - text: About
+#      url: /about
 #    - text: Blog
 #      url: /blog
 #    - text: Gallery
