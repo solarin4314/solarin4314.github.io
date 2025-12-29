@@ -13,8 +13,7 @@
     - S3
     - Elasticsearch
     - Reliability
-  image: /assets/img/projects/log_pipeline.png
-  source: https://github.com/solarin4314/solarin4314.github.io
+  source: 
   demo:
   writeup: /projects/log-pipeline/
 
@@ -32,7 +31,6 @@
     - S3
     - Presto
     - Cost
-  image: /assets/img/projects/athena.png
   source:
   demo:
   writeup: /projects/athena-analytics/
