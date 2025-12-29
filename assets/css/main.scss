@@ -34,3 +34,62 @@ html.dark .related-projects a,
 body.dark .related-projects a {
   border-color: rgba(255,255,255,0.35);
 }
+
+/* =========================
+   Global Badges (Hero + Strengths)
+========================= */
+
+/* 공통 배지 베이스 */
+.badge-pill {
+  padding: 8px 14px !important;
+  border-radius: 999px !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff !important;
+  letter-spacing: 0.3px;
+  opacity: 0.9;
+  display: inline-flex;
+  align-items: center;
+}
+
+.badge-pill:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* Hero badges wrapper */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+/* Strengths summary badges wrapper */
+.strengths-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 28px;
+}
+
+/* 컬러 (의미/영역 공통) */
+.badge-blue  { background: #4F8EF7 !important; }
+.badge-green { background: #3FB984 !important; }
+.badge-purple{ background: #9B6BFF !important; }
+
+/* 기존 클래스와 호환 (지금 HTML 유지 가능) */
+.badge-etl        { background: #4F8EF7 !important; }
+.badge-analytics  { background: #3FB984 !important; }
+.badge-cloud      { background: #9B6BFF !important; }
+
+.badge-reliability { background: #4F8EF7 !important; }
+.badge-scalability { background: #3FB984 !important; }
+.badge-operability { background: #9B6BFF !important; }
+
+
+.timeline-descr {
+  white-space: pre-line; /* \n 줄바꿈을 그대로 보여줌 */
+  line-height: 1.7;
+}

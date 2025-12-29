@@ -13,10 +13,10 @@ permalink: /strengths/
 데이터 시스템을 만들어왔습니다.
 
 <!-- Strengths Summary Badges -->
-<div class="strengths-badges" style="margin: 16px 0 28px;">
-  <span class="badge badge-reliability">Reliability</span>
-  <span class="badge badge-scalability">Scalability</span>
-  <span class="badge badge-operability">Operability</span>
+<div class="strengths-badges">
+  <span class="badge badge-pill badge-reliability">Reliability</span>
+  <span class="badge badge-pill badge-scalability">Scalability</span>
+  <span class="badge badge-pill badge-operability">Operability</span>
 </div>
 
 
