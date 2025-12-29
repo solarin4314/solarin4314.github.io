@@ -61,32 +61,62 @@ body.theme-dark #hero {
     border-radius: 999px;
   }
 
-  /* CTA 버튼이 다크/라이트 모두 자연스럽게 */
-  html.dark .hero-cta.btn {
-    border-color: rgba(255,255,255,0.55);
-    color: #fff;
-  }
-  html.dark .hero-cta.btn:hover {
-    background: rgba(255,255,255,0.12);
-  }
-  html:not(.dark) .hero-cta.btn {
-    border-color: rgba(0,0,0,0.35);
-    color: #111;
-  }
-  html:not(.dark) .hero-cta.btn:hover {
-    background: rgba(0,0,0,0.06);
-  }
+  .hero-badges .badge {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 999px;
+  color: #fff;
+  opacity: 0.9;
+}
 
-  /* Architecture 카드가 다크에서 너무 튀지 않게 */
-  html.dark #architecture .card {
-    background: rgba(255,255,255,0.04) !important;
-    border-color: rgba(255,255,255,0.08);
-  }
+/* 개별 컬러 */
+.badge-etl {
+  background: #4F8EF7;
+}
 
-  /* Projects 상단 제목 간격 */
-  #projects {
-    scroll-margin-top: 90px; /* CTA 스크롤 시 헤더에 가리지 않게 */
-  }
+.badge-analytics {
+  background: #3FB984;
+}
+
+.badge-cloud {
+  background: #9B6BFF;
+}
+
+/* hover 시 살짝 강조 */
+.hero-badges .badge:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+
+/* CTA 버튼이 다크/라이트 모두 자연스럽게 */
+html.dark .hero-cta.btn {
+  border-color: rgba(255,255,255,0.55);
+  color: #fff;
+}
+html.dark .hero-cta.btn:hover {
+  background: rgba(255,255,255,0.12);
+}
+html:not(.dark) .hero-cta.btn {
+  border-color: rgba(0,0,0,0.35);
+  color: #111;
+}
+html:not(.dark) .hero-cta.btn:hover {
+  background: rgba(0,0,0,0.06);
+}
+
+/* Architecture 카드가 다크에서 너무 튀지 않게 */
+html.dark #architecture .card {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* Projects 상단 제목 간격 */
+#projects {
+  scroll-margin-top: 90px; /* CTA 스크롤 시 헤더에 가리지 않게 */
+}
 </style>
 
 <!-- Hero Section (Dark/Light Compatible) -->
@@ -97,15 +127,14 @@ body.theme-dark #hero {
     </h1>
 
     <p class="hero-subtitle" style="color: var(--bs-body-color);">
-      I am a Data Engineer passionate about building scalable data pipelines and insights-driven systems.
+      I build reliable data pipelines and analytics systems that scale with real-world traffic.
     </p>
 
     <div class="d-flex justify-content-center flex-wrap hero-badges">
-      <span class="badge bg-secondary">ETL</span>
-      <span class="badge bg-secondary">Data Analytics</span>
-      <span class="badge bg-secondary">Cloud Infra</span>
-    </div>
-
+      <span class="badge badge-etl">ETL</span>
+      <span class="badge badge-analytics">Data Analytics</span>
+      <span class="badge badge-cloud">Cloud Infra</span>
+    </div>  
     <a href="#projects" class="btn hero-cta btn-lg">
       View My Projects
     </a>
