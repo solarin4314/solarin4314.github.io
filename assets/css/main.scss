@@ -3,10 +3,6 @@
 
 @import "devlopr";
 
-.example-main {
-  color: blue;
-}
-
 /* Strengths - related projects */
 .related-projects {
   margin-top: 12px;
@@ -38,8 +34,6 @@ body.dark .related-projects a {
 /* =========================
    Global Badges (Hero + Strengths)
 ========================= */
-
-/* 공통 배지 베이스 */
 .badge-pill {
   padding: 8px 14px !important;
   border-radius: 999px !important;
@@ -74,12 +68,7 @@ body.dark .related-projects a {
   margin: 16px 0 28px;
 }
 
-/* 컬러 (의미/영역 공통) */
-.badge-blue  { background: #4F8EF7 !important; }
-.badge-green { background: #3FB984 !important; }
-.badge-purple{ background: #9B6BFF !important; }
-
-/* 기존 클래스와 호환 (지금 HTML 유지 가능) */
+/* 기존 클래스와 호환 */
 .badge-etl        { background: #4F8EF7 !important; }
 .badge-analytics  { background: #3FB984 !important; }
 .badge-cloud      { background: #9B6BFF !important; }
@@ -88,8 +77,61 @@ body.dark .related-projects a {
 .badge-scalability { background: #3FB984 !important; }
 .badge-operability { background: #9B6BFF !important; }
 
+/* =========================
+   Project tags (colored)
+========================= */
+.project-tag {
+  margin: 6px 8px 0 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06) !important;
+  color: #e6edf3 !important;
+}
+
+/* 특정 키워드만 색 포인트 */
+.project-tag[data-tag="Kafka"] { background: rgba(79,142,247,0.22) !important; border-color: rgba(79,142,247,0.35); }
+.project-tag[data-tag="Athena"] { background: rgba(63,185,132,0.22) !important; border-color: rgba(63,185,132,0.35); }
+.project-tag[data-tag="Metabase"] { background: rgba(155,107,255,0.22) !important; border-color: rgba(155,107,255,0.35); }
+.project-tag[data-tag="Elasticsearch"] { background: rgba(79,142,247,0.16) !important; border-color: rgba(79,142,247,0.28); }
+.project-tag[data-tag="S3"] { background: rgba(63,185,132,0.16) !important; border-color: rgba(63,185,132,0.28); }
+
+/* =========================
+   Project card accent line
+========================= */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+.project-card:before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4F8EF7, #3FB984, #9B6BFF);
+  opacity: 0.95;
+}
+
+/* =========================
+   Experience Timeline polish
+========================= */
+.timeline-list {
+  padding-left: 18px;
+  border-left: 3px solid rgba(255,255,255,0.18);
+}
+
+.timeline-list .list-group-item {
+  border: 0;
+  padding-left: 14px;
+  margin-bottom: 18px;
+  background: transparent;
+}
+
+.timeline-list .list-group-item h5 {
+  font-weight: 700;
+}
 
 .timeline-descr {
   white-space: pre-line; /* \n 줄바꿈을 그대로 보여줌 */
-  line-height: 1.7;
+  line-height: 1.75;
 }

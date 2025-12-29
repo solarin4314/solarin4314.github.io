@@ -20,20 +20,19 @@ layout: full-width
     align-items: center;
   }
 
-/* ✅ 다크모드 배경: 테마가 html/body 어디에 클래스를 붙이든 대응 */
-#hero { background: #f8f9fa; } /* 기본(라이트) */
+  /* ✅ 다크모드 배경: 테마가 html/body 어디에 클래스를 붙이든 대응 */
+  #hero { background: #f8f9fa; } /* 기본(라이트) */
 
-html.dark #hero,
-body.dark #hero,
-html[data-theme="dark"] #hero,
-body[data-theme="dark"] #hero,
-html.dark-mode #hero,
-body.dark-mode #hero,
-html.theme-dark #hero,
-body.theme-dark #hero {
-  background: #1c1c1e !important;
-}
-
+  html.dark #hero,
+  body.dark #hero,
+  html[data-theme="dark"] #hero,
+  body[data-theme="dark"] #hero,
+  html.dark-mode #hero,
+  body.dark-mode #hero,
+  html.theme-dark #hero,
+  body.theme-dark #hero {
+    background: #1c1c1e !important;
+  }
 
   /* 타이틀이 너무 커서 잘리는 문제 방지 */
   .hero-title {
@@ -50,37 +49,35 @@ body.theme-dark #hero {
     opacity: 0.92;
   }
 
+  /* CTA 버튼이 다크/라이트 모두 자연스럽게 */
+  html.dark .hero-cta.btn {
+    border-color: rgba(255,255,255,0.55);
+    color: #fff;
+  }
+  html.dark .hero-cta.btn:hover {
+    background: rgba(255,255,255,0.12);
+  }
+  html:not(.dark) .hero-cta.btn {
+    border-color: rgba(0,0,0,0.35);
+    color: #111;
+  }
+  html:not(.dark) .hero-cta.btn:hover {
+    background: rgba(0,0,0,0.06);
+  }
 
-/* CTA 버튼이 다크/라이트 모두 자연스럽게 */
-html.dark .hero-cta.btn {
-  border-color: rgba(255,255,255,0.55);
-  color: #fff;
-}
-html.dark .hero-cta.btn:hover {
-  background: rgba(255,255,255,0.12);
-}
-html:not(.dark) .hero-cta.btn {
-  border-color: rgba(0,0,0,0.35);
-  color: #111;
-}
-html:not(.dark) .hero-cta.btn:hover {
-  background: rgba(0,0,0,0.06);
-}
+  /* Architecture 카드가 다크에서 너무 튀지 않게 */
+  html.dark #architecture .card {
+    background: rgba(255,255,255,0.04) !important;
+    border-color: rgba(255,255,255,0.08);
+  }
 
-/* Architecture 카드가 다크에서 너무 튀지 않게 */
-html.dark #architecture .card {
-  background: rgba(255,255,255,0.04) !important;
-  border-color: rgba(255,255,255,0.08);
-}
-
-/* Projects 상단 제목 간격 */
-#projects {
-  scroll-margin-top: 90px; /* CTA 스크롤 시 헤더에 가리지 않게 */
-}
-
+  /* Projects 상단 제목 간격 */
+  #projects {
+    scroll-margin-top: 90px; /* CTA 스크롤 시 헤더에 가리지 않게 */
+  }
 </style>
 
-<!-- Hero Section (Dark/Light Compatible) -->
+<!-- Hero Section -->
 <section id="hero">
   <div class="container text-center">
     <h1 class="hero-title" style="color: var(--bs-body-color);">
@@ -95,7 +92,8 @@ html.dark #architecture .card {
       <span class="badge badge-pill badge-etl">ETL</span>
       <span class="badge badge-pill badge-analytics">Data Analytics</span>
       <span class="badge badge-pill badge-cloud">Cloud Infra</span>
-    </div>  
+    </div>
+
     <a href="#projects" class="btn hero-cta btn-lg">
       View My Projects
     </a>
@@ -107,7 +105,7 @@ html.dark #architecture .card {
     <div class="row justify-content-center">
       <div class="col-12 col-lg-10">
 
-        <!-- Architecture Section -->
+        <!-- Architecture -->
         <section id="architecture" class="section-padding mt-5">
           <div class="container p-0">
             <h2 class="mb-4">Architecture</h2>
@@ -128,7 +126,7 @@ html.dark #architecture .card {
           </div>
         </section>
 
-        <!-- Featured Projects (상위 3개만) -->
+        <!-- Featured Projects (Top 3) -->
         {% assign featured_projects = site.data.projects | slice: 0, 3 %}
         <section id="projects" class="section-padding mt-5">
           <div class="container p-0">
@@ -137,7 +135,7 @@ html.dark #architecture .card {
             <div class="row">
               {% for project in featured_projects %}
               <div class="col-md-6 mb-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100 shadow-sm project-card">
                   {% if project.image %}
                   <img src="{{ project.image }}" class="card-img-top" alt="{{ project.name }}">
                   {% endif %}
@@ -148,7 +146,7 @@ html.dark #architecture .card {
 
                     <div class="mb-3">
                       {% for tag in project.tags %}
-                      <span class="badge badge-secondary">{{ tag }}</span>
+                      <span class="badge badge-pill project-tag" data-tag="{{ tag }}">{{ tag }}</span>
                       {% endfor %}
                     </div>
 
@@ -178,40 +176,40 @@ html.dark #architecture .card {
           </div>
         </section>
 
-        <!-- Experience Section -->
+        <!-- Experience summary (Home) -->
         <section id="experience" class="section-padding mt-5 mb-5">
           <div class="container">
             <h2 class="mb-4">Experience</h2>
 
             <div class="experience-content text-muted" style="line-height: 1.8; max-width: 900px;">
               <p>
-  7년 이상 서버 엔지니어 및 데이터 엔지니어로 근무하며, 실제 서비스 환경에서
-  <strong>안정적이고 확장 가능한 데이터 파이프라인과 분석 시스템</strong>을 설계·운영해왔습니다.
-</p>
+                7년 이상 서버 엔지니어 및 데이터 엔지니어로 근무하며, 실제 서비스 환경에서
+                <strong>안정적이고 확장 가능한 데이터 파이프라인과 분석 시스템</strong>을 설계·운영해왔습니다.
+              </p>
 
-<p>
-  커리어 초반에는 게임 서버 엔지니어로 근무하며 Node.js 기반 서버 기능 개발, 운영툴 개발, 배포 자동화를 경험했습니다.
-  이 과정에서 <strong>데이터가 생성되는 지점을 이해하는 것</strong>이 이후 데이터 파이프라인 설계의 중요한 기반이 되었습니다.
-</p>
+              <p>
+                커리어 초반에는 게임 서버 엔지니어로 근무하며 Node.js 기반 서버 기능 개발, 운영툴 개발, 배포 자동화를 경험했습니다.
+                이 과정에서 <strong>데이터가 생성되는 지점을 이해하는 것</strong>이 이후 데이터 파이프라인 설계의 중요한 기반이 되었습니다.
+              </p>
 
-<p>
-  이후 Kafka–Logstash–S3/Elasticsearch–Athena–MongoDB–MySQL 기반의 <strong>엔드투엔드 데이터 파이프라인</strong>을
-  직접 설계·구현·운영하며, 실시간 모니터링과 배치 분석 워크로드를 분리한 구조로 대규모 로그 트래픽 환경에서도 안정성을 확보했습니다.
-</p>
+              <p>
+                이후 Kafka–Logstash–S3/Elasticsearch–Athena–MongoDB–MySQL 기반의 <strong>엔드투엔드 데이터 파이프라인</strong>을
+                직접 설계·구현·운영하며, 실시간 모니터링과 배치 분석 워크로드를 분리한 구조로 대규모 로그 트래픽 환경에서도 안정성을 확보했습니다.
+              </p>
 
-<p>
-  단순한 데이터 처리에 그치지 않고 운영 안정성·비용 효율성·운영 편의성을 설계 기준으로 삼아 배치 자동화, 모니터링, 알림 체계를 구축했습니다.
-  또한 콘텐츠별 리셋 시간 차이로 발생하던 지표 왜곡 문제를 해결하여 <strong>지표 정합성을 100% 확보</strong>한 경험이 있습니다.
-</p>
+              <p>
+                단순한 데이터 처리에 그치지 않고 운영 안정성·비용 효율성·운영 편의성을 설계 기준으로 삼아 배치 자동화, 모니터링, 알림 체계를 구축했습니다.
+                또한 콘텐츠별 리셋 시간 차이로 발생하던 지표 왜곡 문제를 해결하여 <strong>지표 정합성을 100% 확보</strong>한 경험이 있습니다.
+              </p>
 
-<p>
-  Metabase 기반 데이터 조회 환경을 구축하여 기획·운영팀이 개발팀의 도움 없이도 지표를 확인할 수 있도록 지원했고,
-  이를 통해 조직 전체의 데이터 활용성과 의사결정 속도를 개선했습니다.
-</p>
-
+              <p>
+                Metabase 기반 데이터 조회 환경을 구축하여 기획·운영팀이 개발팀의 도움 없이도 지표를 확인할 수 있도록 지원했고,
+                이를 통해 조직 전체의 데이터 활용성과 의사결정 속도를 개선했습니다.
+              </p>
             </div>
           </div>
         </section>
+
       </div>
     </div>
   </div>
@@ -223,10 +221,7 @@ html.dark #architecture .card {
     const hero = document.getElementById('hero');
     if(!hero) return;
 
-    // MutationObserver로 html 클래스 변경 감지
-    const obs = new MutationObserver(() => {
-      // CSS에서 처리하므로 여기선 할 일 없음(유지용)
-    });
+    const obs = new MutationObserver(() => {});
     obs.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
   })();
 </script>

@@ -4,12 +4,17 @@
     {% if show_title %}
       <h2 class="mb-4">Experience</h2>
     {% endif %}
-    <ul class="list-group list-group-flush border-left pl-3" style="border-left: 3px solid #ddd;">
+
+    <ul class="list-group list-group-flush timeline-list">
       {% for item in site.data.timeline %}
       <li class="list-group-item bg-transparent">
-        <h5 class="mb-1">{{ item.title }} <span class="text-muted" style="font-size: 0.8em;">@ {{ item.org }}</span></h5>
+        <h5 class="mb-1">
+          {{ item.title }}
+          <span class="text-muted" style="font-size: 0.8em;">@ {{ item.org }}</span>
+        </h5>
+
         <div class="text-muted small mb-2">{{ item.from }} - {{ item.to }}</div>
-        <p class="mb-1 timeline-descr" >{{ item.descr }}</p>
+        <p class="mb-1 timeline-descr">{{ item.descr }}</p>
       </li>
       {% endfor %}
     </ul>
