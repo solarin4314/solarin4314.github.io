@@ -6,3 +6,31 @@
 .example-main {
   color: blue;
 }
+
+/* Strengths - related projects */
+.related-projects {
+  margin-top: 12px;
+}
+
+.related-projects a {
+  display: inline-block;
+  margin: 4px 6px 0 0;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(100,100,100,0.35);
+  color: var(--bs-body-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.related-projects a:hover {
+  background: rgba(100,100,100,0.08);
+  transform: translateY(-1px);
+}
+
+/* 다크모드 대응 */
+html.dark .related-projects a,
+body.dark .related-projects a {
+  border-color: rgba(255,255,255,0.35);
+}

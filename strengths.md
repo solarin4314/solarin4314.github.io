@@ -4,45 +4,67 @@ title: Strengths
 permalink: /strengths/
 ---
 
+## Strengths
+
+### 데이터 엔지니어로서 제가 가장 중요하게 생각하는 강점입니다
+
+엔드투엔드 데이터 파이프라인을 직접 설계·운영하며,  
+대규모 트래픽 환경에서도 **안정성 · 확장성 · 운영성**을 함께 고려한  
+데이터 시스템을 만들어왔습니다.
+
+<!-- Strengths Summary Badges -->
+<div class="hero-badges" style="margin: 16px 0 28px;">
+  <span class="badge badge-etl">Reliability</span>
+  <span class="badge badge-analytics">Scalability</span>
+  <span class="badge badge-cloud">Operability</span>
+</div>
+
+---
+
 ## 결과에 끝까지 책임지는 엔지니어
 
 단순히 파이프라인을 “구현하는 것”이 아니라,  
-**장애 상황에서도 안정적으로 동작하는 구조를 만드는 것**을 중요하게 생각합니다.
+**장애 상황에서도 계속 동작하는 구조를 만드는 것**을 가장 중요하게 생각합니다.
 
-- Kafka–Logstash–S3–Elasticsearch 기반 End-to-End 데이터 파이프라인 설계·구현·운영
+- Kafka–Logstash–S3/Elasticsearch 기반 엔드투엔드 로그 파이프라인 설계·운영
 - 장애 발생 시 원인 분석 → 구조 개선 → 재발 방지까지 책임
-- “돌아가는 코드”보다 “계속 돌아가는 시스템”을 우선
+- “돌아가는 코드”보다 **“계속 돌아가는 시스템”**을 우선하는 관점
 
-**관련 프로젝트**
-- 👉 [대용량 로그 파이프라인 재설계](/projects/log-pipeline/)
-- 👉 [로그 수집 안정화 및 장애 대응 개선](/projects/log-stability/)
+<div class="related-projects">
+  <strong>관련 프로젝트</strong><br />
+  <a href="/projects/log-pipeline/">대용량 로그 파이프라인 재설계</a>
+  <a href="/projects/ops-automation/">배치·모니터링 자동화</a>
+</div>
 
 ---
 
 ## 대규모 로그 환경을 구조로 해결
 
 대규모 로그 환경의 문제는  
-개별 튜닝이 아니라 **구조적 분리**로 해결해야 한다고 생각합니다.
+개별 튜닝이 아니라 **구조적인 분리와 역할 정의**로 해결해야 한다고 생각합니다.
 
-- 병목, 비용, 정합성 문제를 구조적으로 개선
-- 목적별 저장소(S3 / ES / MongoDB) 분리
-- 실시간 처리와 배치 분석 분리
+- 단일 저장소 중심 구조를 목적별 저장소(S3 / ES / MongoDB)로 분리
+- 실시간 처리와 배치 분석 워크로드를 분리해 안정성과 효율 동시 확보
+- 데이터 증가 시에도 구조 변경 없이 확장 가능한 설계
 
-**관련 프로젝트**
-- 👉 [Kafka 기반 로그 파이프라인 병목 제거](/projects/kafka-pipeline/)
-- 👉 [Athena 기반 대규모 로그 분석 환경 구축](/projects/athena-analytics/)
+<div class="related-projects">
+  <strong>관련 프로젝트</strong><br />
+  <a href="/projects/kafka-pipeline/">Kafka 기반 로그 파이프라인 구축</a>
+  <a href="/projects/athena-analytics/">Athena 기반 대규모 로그 분석 환경</a>
+</div>
 
 ---
 
-## 데이터 생성 지점을 이해한 설계
+## 운영과 협업을 고려한 설계
 
-데이터는 수집보다  
-**어디서 어떻게 생성되는지 이해하는 것이 먼저**라고 생각합니다.
+데이터 시스템은 개발자만을 위한 것이 아니라,  
+**조직 전체가 활용할 수 있어야 가치가 있다고 생각합니다.**
 
-- 서버 개발 경험 기반 데이터 생성 지점 이해
-- 로그 스키마 및 수집 전략 설계
-- 분석·집계·시각화까지 이어지는 일관된 흐름 설계
+- 기획·운영팀을 위한 Metabase 기반 데이터 조회 환경 구축
+- 공통 지표 테이블 설계로 반복적인 통계 페이지 개발 제거
+- 데이터 접근 권한과 사용성을 함께 고려한 구조 설계
 
-**관련 프로젝트**
-- 👉 [서비스 로그 스키마 설계 및 개선](/projects/log-schema/)
-- 👉 [운영·기획팀을 위한 데이터 조회 환경 구축](/projects/metabase/)
+<div class="related-projects">
+  <strong>관련 프로젝트</strong><br />
+  <a href="/projects/metabase/">Metabase 데이터 조회 환경 구축</a>
+</div>
