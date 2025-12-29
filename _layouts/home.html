@@ -117,6 +117,44 @@ html.dark #architecture .card {
 #projects {
   scroll-margin-top: 90px; /* CTA 스크롤 시 헤더에 가리지 않게 */
 }
+
+/* Strengths summary badges */
+.strengths-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.strengths-badges .badge {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  color: #fff;
+  letter-spacing: 0.3px;
+  opacity: 0.9;
+}
+
+.strengths-badges .badge:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* 의미별 컬러 */
+.badge-reliability {
+  background: #4F8EF7; /* Blue */
+}
+
+.badge-scalability {
+  background: #3FB984; /* Green */
+}
+
+.badge-operability {
+  background: #9B6BFF; /* Purple */
+}
+
+
 </style>
 
 <!-- Hero Section (Dark/Light Compatible) -->
