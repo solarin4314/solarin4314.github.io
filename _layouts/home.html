@@ -10,23 +10,98 @@ layout: full-width
   });
 </script>
 
-<!-- Hero Section -->
-<section id="hero" class="section-padding text-center bg-light">
-  <div class="container">
-    <h1 class="display-4 mb-3">Hi, I am Jemin Lee!</h1>
-    <p class="lead mb-4">
+<style>
+  /* Hero: 헤더(nav)와 겹침 방지 */
+  #hero {
+    padding-top: 110px; /* 상단 고정 nav 높이에 맞춰 여유 */
+    padding-bottom: 70px;
+    min-height: calc(70vh);
+    display: flex;
+    align-items: center;
+  }
+
+  /* 다크/라이트 모드 배경 (테마의 class 토글을 따라감) */
+  html.dark #hero {
+    background: #1c1c1e;
+  }
+  html:not(.dark) #hero {
+    background: #f8f9fa;
+  }
+
+  /* 타이틀이 너무 커서 잘리는 문제 방지 */
+  .hero-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 760px;
+    margin: 0 auto 22px;
+    opacity: 0.92;
+  }
+
+  /* 배지 줄바꿈 자연스럽게 */
+  .hero-badges {
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+  .hero-badges .badge {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    border-radius: 999px;
+  }
+
+  /* CTA 버튼이 다크/라이트 모두 자연스럽게 */
+  html.dark .hero-cta.btn {
+    border-color: rgba(255,255,255,0.55);
+    color: #fff;
+  }
+  html.dark .hero-cta.btn:hover {
+    background: rgba(255,255,255,0.12);
+  }
+  html:not(.dark) .hero-cta.btn {
+    border-color: rgba(0,0,0,0.35);
+    color: #111;
+  }
+  html:not(.dark) .hero-cta.btn:hover {
+    background: rgba(0,0,0,0.06);
+  }
+
+  /* Architecture 카드가 다크에서 너무 튀지 않게 */
+  html.dark #architecture .card {
+    background: rgba(255,255,255,0.04) !important;
+    border-color: rgba(255,255,255,0.08);
+  }
+
+  /* Projects 상단 제목 간격 */
+  #projects {
+    scroll-margin-top: 90px; /* CTA 스크롤 시 헤더에 가리지 않게 */
+  }
+</style>
+
+<!-- Hero Section (Dark/Light Compatible) -->
+<section id="hero">
+  <div class="container text-center">
+    <h1 class="hero-title" style="color: var(--bs-body-color);">
+      Hi, I am Jemin Lee!
+    </h1>
+
+    <p class="hero-subtitle" style="color: var(--bs-body-color);">
       I am a Data Engineer passionate about building scalable data pipelines and insights-driven systems.
     </p>
 
-    <!-- 핵심 강점 -->
-    <div class="d-flex justify-content-center gap-4 mb-4">
-      <span class="badge bg-primary">ETL</span>
-      <span class="badge bg-success">Data Analytics</span>
-      <span class="badge bg-info">Cloud Infra</span>
+    <div class="d-flex justify-content-center flex-wrap hero-badges">
+      <span class="badge bg-secondary">ETL</span>
+      <span class="badge bg-secondary">Data Analytics</span>
+      <span class="badge bg-secondary">Cloud Infra</span>
     </div>
 
-    <!-- CTA 버튼 -->
-    <a href="#projects" class="btn btn-primary btn-lg">View My Projects</a>
+    <a href="#projects" class="btn hero-cta btn-lg">
+      View My Projects
+    </a>
   </div>
 </section>
 
@@ -37,8 +112,9 @@ layout: full-width
 
         <!-- Architecture Section -->
         <section id="architecture" class="section-padding mt-5">
-          <div class="container">
+          <div class="container p-0">
             <h2 class="mb-4">Architecture</h2>
+
             <div class="card p-3 shadow-sm bg-transparent">
               <img
                 src="{{ site.baseurl }}/assets/img/architecture/data_pipeline.png"
@@ -52,11 +128,12 @@ layout: full-width
           </div>
         </section>
 
-        <!-- Projects Section -->
-        {% assign featured_projects = site.data.projects | slice: 0,3 %}
+        <!-- Featured Projects (상위 3개만) -->
+        {% assign featured_projects = site.data.projects | slice: 0, 3 %}
         <section id="projects" class="section-padding mt-5">
-          <div class="container">
+          <div class="container p-0">
             <h2 class="mb-4">Featured Projects</h2>
+
             <div class="row">
               {% for project in featured_projects %}
               <div class="col-md-6 mb-4">
@@ -64,20 +141,27 @@ layout: full-width
                   {% if project.image %}
                   <img src="{{ project.image }}" class="card-img-top" alt="{{ project.name }}">
                   {% endif %}
+
                   <div class="card-body">
                     <h5 class="card-title">{{ project.name }}</h5>
                     <p class="card-text">{{ project.descr }}</p>
+
                     <div class="mb-3">
                       {% for tag in project.tags %}
                       <span class="badge badge-secondary">{{ tag }}</span>
                       {% endfor %}
                     </div>
+
                     <div class="d-flex justify-content-between align-items-center">
                       {% if project.source %}
-                      <a href="{{ project.source }}" class="btn btn-sm btn-outline-primary" target="_blank">View Code</a>
+                      <a href="{{ project.source }}" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener">
+                        View Code
+                      </a>
                       {% endif %}
                       {% if project.demo %}
-                      <a href="{{ project.demo }}" class="btn btn-sm btn-outline-success" target="_blank">Live Demo</a>
+                      <a href="{{ project.demo }}" class="btn btn-sm btn-outline-success" target="_blank" rel="noopener">
+                        Live Demo
+                      </a>
                       {% endif %}
                     </div>
                   </div>
@@ -85,8 +169,11 @@ layout: full-width
               </div>
               {% endfor %}
             </div>
-            <div class="text-center mt-4">
-              <a href="/projects" class="btn btn-outline-primary">See All Projects</a>
+
+            <div class="text-center mt-3">
+              <a href="/projects" class="btn btn-outline-primary">
+                See All Projects
+              </a>
             </div>
           </div>
         </section>
@@ -98,3 +185,17 @@ layout: full-width
     </div>
   </div>
 </section>
+
+<script>
+  // 테마의 다크모드 토글이 class를 바꾸는 경우, 혹시 몰라서 감지(없어도 무해)
+  (function(){
+    const hero = document.getElementById('hero');
+    if(!hero) return;
+
+    // MutationObserver로 html 클래스 변경 감지
+    const obs = new MutationObserver(() => {
+      // CSS에서 처리하므로 여기선 할 일 없음(유지용)
+    });
+    obs.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  })();
+</script>
