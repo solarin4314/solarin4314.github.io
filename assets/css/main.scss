@@ -131,6 +131,21 @@ body.dark .related-projects a {
   font-weight: 700;
 }
 
+/* =========================
+   Timeline bullets (new)
+========================= */
+.timeline-bullets {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #adb5bd;
+}
+
+.timeline-bullets li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+
 .timeline-descr {
   white-space: pre-line; /* \n 줄바꿈을 그대로 보여줌 */
   line-height: 1.75;

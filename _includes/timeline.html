@@ -14,7 +14,18 @@
         </h5>
 
         <div class="text-muted small mb-2">{{ item.from }} - {{ item.to }}</div>
-        <p class="mb-1 timeline-descr">{{ item.descr }}</p>
+
+        {% if item.bullets %}
+          <ul class="timeline-bullets">
+            {% for b in item.bullets %}
+              <li>{{ b }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          {% if item.descr %}
+            <p class="mb-1 timeline-descr">{{ item.descr }}</p>
+          {% endif %}
+        {% endif %}
       </li>
       {% endfor %}
     </ul>
