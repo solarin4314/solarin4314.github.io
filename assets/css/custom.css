@@ -1,0 +1,36 @@
+/* ===== Strengths summary badges ===== */
+.strengths-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 28px;
+}
+
+.strengths-badges .badge {
+  padding: 8px 14px !important;
+  border-radius: 999px !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff !important;
+  letter-spacing: 0.3px;
+  opacity: 0.9;
+}
+
+.strengths-badges .badge:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* 의미별 컬러 */
+.strengths-badges .badge-reliability {
+  background: #4F8EF7 !important;
+}
+
+.strengths-badges .badge-scalability {
+  background: #3FB984 !important;
+}
+
+.strengths-badges .badge-operability {
+  background: #9B6BFF !important;
+}
