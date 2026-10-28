@@ -1,4 +1,5 @@
 - name: 대용량 로그 파이프라인 재설계
+  id: log-pipeline # /projects/#log-pipeline 링크용
   featured: true
   one_liner: "운영 장애/유실을 줄이기 위해 End-to-End 로그 수집 구조를 재설계"
   descr: >
@@ -15,9 +16,10 @@
     - Reliability
   source: 
   demo:
-  writeup: /projects/log-pipeline/
+  writeup: # 상세 페이지(케이스 스터디)를 만들면 경로 입력 (예: /projects/log-pipeline/)
 
 - name: Athena 기반 서버리스 분석 환경 구축
+  id: athena-analytics # /projects/#athena-analytics 링크용
   featured: true
   one_liner: "RDB 분석 병목을 S3+Athena로 전환해 비용/성능 개선"
   descr: >
@@ -33,9 +35,10 @@
     - Cost
   source:
   demo:
-  writeup: /projects/athena-analytics/
+  writeup: # 상세 페이지(케이스 스터디)를 만들면 경로 입력 (예: /projects/athena-analytics/)
 
 - name: Metabase 데이터 조회 환경 구축
+  id: metabase # /projects/#metabase 링크용
   featured: true
   one_liner: "운영/기획팀이 직접 지표를 확인할 수 있도록 셀프서브 BI 제공"
   descr: >
@@ -49,9 +52,10 @@
     - Metrics
   source:
   demo:
-  writeup: /projects/metabase/
+  writeup: # 상세 페이지(케이스 스터디)를 만들면 경로 입력 (예: /projects/metabase/)
 
 - name: 배치/백업/모니터링 자동화
+  id: ops-automation # /projects/#ops-automation 링크용
   featured: false
   one_liner: "반복 운영 작업을 자동화해 안정성과 대응 속도를 개선"
   descr: >
@@ -66,4 +70,4 @@
     - Operations
   source:
   demo:
-  writeup: /projects/ops-automation/
+  writeup: # 상세 페이지(케이스 스터디)를 만들면 경로 입력 (예: /projects/ops-automation/)

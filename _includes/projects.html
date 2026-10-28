@@ -27,7 +27,8 @@
 
       {% for project in items %}
       <div class="col-md-6 mb-4">
-        <div class="card h-100 shadow-sm">
+        {% comment %} id: Home / Strengths 페이지에서 /projects/#<id> 로 연결 {% endcomment %}
+        <div class="card h-100 shadow-sm project-anchor" id="{{ project.id }}">
 
           {% if project.image %}
           <img src="{{ project.image }}" class="card-img-top" alt="{{ project.name }}">
