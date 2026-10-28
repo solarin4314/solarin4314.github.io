@@ -1,7 +1,7 @@
-{% assign show_title = include.show_title | default: true %}
 <section id="timeline" class="section-padding mt-5 mb-5">
   <div class="container">
-    {% if show_title %}
+    {% comment %} Liquid의 default 필터는 false도 빈 값으로 보므로 != false 로 직접 비교 {% endcomment %}
+    {% if include.show_title != false %}
       <h2 class="mb-4">Experience</h2>
     {% endif %}
 
