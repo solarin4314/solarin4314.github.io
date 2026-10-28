@@ -241,6 +241,87 @@ html[data-theme="dark"] .text-muted {
   line-height: 1.75;
 }
 
+/* 프로젝트 상태 배지 (예: 진행 중) */
+.badge-status {
+  background: #0b5ed7;
+  color: #fff;
+}
+
+/* =========================
+   Project detail (case study) pages: _layouts/project.html
+========================= */
+.project-back {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.project-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project-one-liner {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.project-meta-label {
+  font-weight: 700;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.project-content h2 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.project-content h3 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.project-content td,
+.project-content th {
+  overflow-wrap: anywhere; /* 긴 영문·URL이 있어도 표가 화면 밖으로 넘치지 않게 */
+}
+
+.project-figure {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.project-figure img {
+  border-radius: 8px;
+  border: 1px solid var(--light-border-color);
+}
+
+.project-figure figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* 그림 파일이 아직 없을 때 로컬 미리보기에서만 보이는 자리 표시 (_includes/project_figure.html) */
+.project-figure-placeholder {
+  margin: 24px 0;
+  padding: 48px 16px;
+  border: 2px dashed var(--light-border-color);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
 /* =========================
    Footer
 ========================= */

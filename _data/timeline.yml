@@ -1,4 +1,13 @@
 - title: Data Engineer
+  org: 미래엔
+  from: 2026.05
+  to: 현재
+  draft: true # 초안: 배포 사이트에서는 숨김. 내용을 채운 뒤 이 줄을 지우면 공개됩니다
+  bullets:
+    - "LRS 구축 (진행 중): TODO 한 줄 요약"
+    - "AI 문제 생성 (진행 중): TODO 한 줄 요약"
+
+- title: Data Engineer
   org: (주)야나두
   from: 2023.03
   to: 2025.12

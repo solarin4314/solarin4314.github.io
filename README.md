@@ -14,11 +14,21 @@ Jekyll로 만들고 GitHub Pages로 배포합니다.
 | 프로젝트 목록 | `_data/projects.yml` |
 | 경력 타임라인 | `_data/timeline.yml` |
 | Experience / Strengths / Contact 페이지 | `experience.md`, `strengths.md`, `contact.md` |
+| 프로젝트 상세 페이지 | `projects/<id>.md` (그림: `assets/img/projects/<id>/`) |
 | 스타일 (라이트/다크 색상 포함) | `assets/css/main.scss` |
 
 - 프로젝트의 `featured: true` 항목이 홈에 최대 3개까지 표시됩니다.
 - Strengths 페이지의 "관련 프로젝트"는 `_data/projects.yml`의 `strengths` 값으로 자동 연결됩니다.
 - 프로젝트 상세 페이지(케이스 스터디)를 만들면 해당 프로젝트의 `writeup`에 경로를 적어 주세요. 비어 있으면 Projects 페이지의 카드로 연결됩니다.
+
+## 프로젝트 상세 페이지와 초안(draft)
+
+- 상세 페이지는 `projects/<id>.md`에 씁니다 (`layout: project`, `project_id: <id>`). 위쪽의 제목·한 줄 요약·회사·기간·역할·상태·태그는 `_data/projects.yml`의 같은 `id` 항목에서 가져옵니다.
+- 그림은 `assets/img/projects/<id>/`에 넣고 본문에서 `{% include project_figure.html src="/assets/img/projects/<id>/파일.png" caption="설명" %}`로 표시합니다. 파일이 아직 없으면 로컬 미리보기에서만 점선 상자로 자리가 보입니다.
+- 작성 중인 내용은 초안으로 두면 배포 사이트에 보이지 않습니다. 다 채운 뒤 아래 줄을 지우면 공개됩니다.
+  - `_data/projects.yml`, `_data/timeline.yml`의 `draft: true`
+  - 상세 페이지 front matter의 `published: false`
+- 초안까지 로컬에서 미리 보려면 `bundle exec jekyll serve --unpublished`로 실행합니다.
 
 ## 로컬 실행
 

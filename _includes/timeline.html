@@ -5,12 +5,19 @@
       <h2 class="mb-4">Experience</h2>
     {% endif %}
 
+    {% comment %} draft: true 항목은 배포(production) 빌드에서 숨기고, 로컬 미리보기에서만 Draft 표시와 함께 보여줌 {% endcomment %}
+    {% assign timeline_items = site.data.timeline %}
+    {% if jekyll.environment == "production" %}
+      {% assign timeline_items = timeline_items | where_exp: "item", "item.draft != true" %}
+    {% endif %}
+
     <ul class="list-group list-group-flush timeline-list">
-      {% for item in site.data.timeline %}
+      {% for item in timeline_items %}
       <li class="list-group-item bg-transparent">
         <h5 class="mb-1">
           {{ item.title }}
           <span class="text-muted" style="font-size: 0.8em;">@ {{ item.org }}</span>
+          {% if item.draft %}<span class="badge badge-danger ml-1">Draft</span>{% endif %}
         </h5>
 
         <div class="text-muted small mb-2">{{ item.from }} - {{ item.to }}</div>
