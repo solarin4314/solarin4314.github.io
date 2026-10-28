@@ -31,11 +31,7 @@ permalink: /strengths/
 - 장애 발생 시 원인 분석 → 구조 개선 → 재발 방지까지 책임
 - “돌아가는 코드”보다 **“계속 돌아가는 시스템”**을 우선하는 관점
 
-<div class="related-projects">
-  <strong>관련 프로젝트</strong><br />
-  <a href="/projects/log-pipeline/">대용량 로그 파이프라인 재설계</a>
-  <a href="/projects/ops-automation/">배치·모니터링 자동화</a>
-</div>
+{% include related_projects.html strength="결과에 끝까지 책임" %}
 
 ---
 
@@ -48,11 +44,7 @@ permalink: /strengths/
 - 실시간 처리와 배치 분석 워크로드를 분리해 안정성과 효율 동시 확보
 - 데이터 증가 시에도 구조 변경 없이 확장 가능한 설계
 
-<div class="related-projects">
-  <strong>관련 프로젝트</strong><br />
-  <a href="/projects/kafka-pipeline/">Kafka 기반 로그 파이프라인 구축</a>
-  <a href="/projects/athena-analytics/">Athena 기반 대규모 로그 분석 환경</a>
-</div>
+{% include related_projects.html strength="대규모 로그를 구조로 해결" %}
 
 ---
 
@@ -65,7 +57,4 @@ permalink: /strengths/
 - 공통 지표 테이블 설계로 반복적인 통계 페이지 개발 제거
 - 데이터 접근 권한과 사용성을 함께 고려한 구조 설계
 
-<div class="related-projects">
-  <strong>관련 프로젝트</strong><br />
-  <a href="/projects/metabase/">Metabase 데이터 조회 환경 구축</a>
-</div>
+{% include related_projects.html strength="운영/협업을 고려한 설계" %}
